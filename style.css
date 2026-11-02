@@ -1,0 +1,464 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --pink: #ff75ae;
+    --rose: #ffb3cf;
+    --gold: #f8d78a;
+    --cream: #fff5fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 15%, #55204f, transparent 38%),
+        radial-gradient(ellipse at 85% 25%, #302b68, transparent 40%),
+        linear-gradient(135deg, #10091f, #21102f, #120d2a);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: 0;
+}
+
+.wrap {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+.screen {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.nav {
+    position: fixed;
+    z-index: 20;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(900px, 95%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    border: 1px solid #ffffff20;
+    border-radius: 99px;
+    background: #160d27dd;
+    backdrop-filter: blur(18px);
+}
+
+.brand {
+    font-family: 'Great Vibes';
+    font-size: 27px;
+    color: var(--gold);
+}
+
+.nav a {
+    color: #fce8f2;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.nav a:hover {
+    color: var(--gold);
+}
+
+.eyebrow {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.script {
+    font-family: 'Great Vibes', cursive;
+    color: var(--rose);
+    font-weight: 400;
+}
+
+.hero {
+    text-align: center;
+    max-width: 850px;
+    padding: 35px 15px;
+}
+
+.hero .script {
+    font-size: clamp(48px, 9vw, 100px);
+    margin: 18px 0 6px;
+}
+
+.hero h1 {
+    font: 600 clamp(28px, 5vw, 52px) 'Playfair Display';
+}
+
+.hero p {
+    color: #e7d5e6;
+    max-width: 590px;
+    margin: 20px auto 28px;
+    line-height: 1.8;
+}
+
+.btn {
+    padding: 14px 24px;
+    border-radius: 999px;
+    color: #29122a;
+    background: linear-gradient(110deg, #ffe7a9, #ff9fc6);
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 38px #ff75ae66;
+}
+
+.btn.ghost {
+    background: #ffffff12;
+    border: 1px solid #ffffff40;
+    color: white;
+}
+
+.glass {
+    background: linear-gradient(145deg, #ffffff12, #ffffff06);
+    border: 1px solid #ffffff24;
+    border-radius: 26px;
+    box-shadow: 0 25px 80px #08031155;
+    backdrop-filter: blur(14px);
+}
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 7s ease-in-out infinite;
+}
+
+.orb.one {
+    width: 150px;
+    height: 150px;
+    left: 7%;
+    top: 22%;
+    background: #ff75ae30;
+    filter: blur(30px);
+}
+
+.orb.two {
+    width: 200px;
+    height: 200px;
+    right: 7%;
+    bottom: 13%;
+    background: #8e6dff30;
+    filter: blur(35px);
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-22px);
+    }
+}
+
+.envelope-card {
+    width: min(520px, 92vw);
+    padding: 35px;
+    text-align: center;
+}
+
+.envelope {
+    font-size: 100px;
+    display: block;
+    animation: bob 2.8s infinite;
+}
+
+@keyframes bob {
+    50% { transform: translateY(-12px); }
+}
+
+.envelope-card h2,
+.section-title h2 {
+    font: 600 32px 'Playfair Display';
+}
+
+.letter {
+    display: none;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 1.9;
+}
+
+.letter.show {
+    display: block;
+    animation: reveal .8s ease;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title p,
+.game-note {
+    color: #d8c4dc;
+}
+
+.game-card {
+    width: min(680px, 94vw);
+    padding: 25px;
+    text-align: center;
+}
+
+.game-area {
+    height: 270px;
+    border: 1px dashed #ffffff44;
+    border-radius: 18px;
+    margin: 18px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heart-target {
+    position: absolute;
+    background: none;
+    font-size: 30px;
+    animation: heartPop 2.8s linear forwards;
+}
+
+@keyframes heartPop {
+    to { transform: translateY(-15px); }
+}
+
+.extra-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.mini {
+    padding: 22px;
+    text-align: center;
+}
+
+.mini h3 {
+    font: 600 22px 'Playfair Display';
+}
+
+.small-btn {
+    padding: 10px 17px;
+    border-radius: 30px;
+    background: linear-gradient(110deg, #ffe7a9, #ff9fc6);
+    color: #29122a;
+    font-weight: 700;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 280px;
+    margin: 15px auto;
+}
+
+.memory-tile {
+    height: 55px;
+    border-radius: 12px;
+    background: #ffffff15;
+    color: white;
+    font-size: 24px;
+}
+
+.memory-tile:disabled {
+    background: #ff9fc633;
+}
+
+.wheel {
+    width: 150px;
+    height: 150px;
+    margin: 14px auto;
+    border-radius: 50%;
+    border: 7px solid var(--gold);
+    background: conic-gradient(
+        #ff75ae 0 60deg,
+        #704a91 60deg 120deg,
+        #f4c5d8 120deg 180deg,
+        #6b5ab0 180deg 240deg,
+        #ffc56e 240deg 300deg,
+        #a64d83 300deg
+    );
+    display: grid;
+    place-items: center;
+    font-size: 38px;
+    transition: transform 2s;
+}
+
+.quiz-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+}
+
+.quiz-options button {
+    padding: 9px 12px;
+    border-radius: 20px;
+    background: #ffffff16;
+    color: white;
+    border: 1px solid #ffffff30;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.photo-card {
+    padding: 18px;
+    text-align: center;
+}
+
+.photo-frame {
+    aspect-ratio: 4 / 3;
+    border: 1px dashed #ffffff55;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 12px 0;
+    background: #ff75ae16;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    padding: 15px;
+}
+
+.proposal {
+    width: min(760px, 94vw);
+    padding: clamp(25px, 5vw, 55px);
+    text-align: center;
+}
+
+.proposal h2 {
+    font: 600 clamp(32px, 6vw, 55px) 'Playfair Display';
+}
+
+.proposal p {
+    line-height: 1.9;
+    color: #f0deeb;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.no-msg {
+    min-height: 25px;
+    color: var(--gold);
+    margin-top: 17px;
+}
+
+.finale {
+    display: none;
+    text-align: center;
+}
+
+.finale.show {
+    display: block;
+    animation: reveal .8s ease;
+}
+
+.finale .script {
+    font-size: clamp(45px, 9vw, 85px);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #bba8c4;
+    font-size: 12px;
+}
+
+.spark {
+    position: fixed;
+    top: -30px;
+    z-index: 30;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(700deg);
+        opacity: .1;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media(max-width: 600px) {
+    .nav {
+        width: 98%;
+        padding: 8px;
+        overflow-x: auto;
+    }
+
+    .nav a {
+        font-size: 10px;
+        margin-left: 7px;
+    }
+
+    .brand {
+        font-size: 22px;
+    }
+
+    .screen {
+        padding: 85px 0;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-area {
+        height: 240px;
+    }
+}

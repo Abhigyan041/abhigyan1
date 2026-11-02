@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Aditi 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="brand">For Aditi ✧</div>
+    <div>
+        <a href="#letter">Letter</a>
+        <a href="#game">Play</a>
+        <a href="#more-games">More Games</a>
+        <a href="#memories">Photos</a>
+        <a href="#proposal">Proposal</a>
+    </div>
+</nav>
+
+<div class="orb one"></div>
+<div class="orb two"></div>
+
+<main>
+
+<section class="screen" id="home">
+    <div class="hero">
+        <div class="eyebrow">A Special Corner For You</div>
+        <div class="script">Hey, Aditi...</div>
+        <h1>Something Special Is Waiting For You</h1>
+        <p>
+            Is website ke har chhote detail mein ek baat chhupi hai.
+            Tum mere liye special ho. Ready ho ek cute journey ke liye?
+        </p>
+        <a class="btn" href="#letter">Let's Begin ✨</a>
+    </div>
+</section>
+
+<section class="screen" id="letter">
+    <div class="envelope-card glass">
+        <span class="envelope">💌</span>
+        <div class="eyebrow">A Letter Just For You</div>
+        <h2>Ek Chhoti Si Baat...</h2>
+        <p>Is envelope ke andar kuch special words hain.</p>
+
+        <button class="btn" id="openLetter">
+            Open My Letter
+        </button>
+
+        <div class="letter" id="letterText">
+            <p>Dear Aditi,</p>
+            <p>
+                Kabhi-kabhi kuch log bina kisi special reason ke
+                hamare din ko better bana dete hain.
+                Tum unhi logon mein se ek ho.
+            </p>
+            <p>
+                Tumhari smile, tumhari baatein aur tumhara nature
+                genuinely special hai.
+            </p>
+            <p>
+                Main tum par koi pressure nahi daalna chahta.
+                Bas honestly kehna chahta hoon:
+                <b>Tum mere liye bahut special ho.</b>
+            </p>
+            <div class="script">With a smile, always 💗</div>
+        </div>
+    </div>
+</section>
+
+<section class="screen" id="game">
+    <div class="wrap">
+        <div class="section-title">
+            <div class="eyebrow">Level 01</div>
+            <h2>Catch The Falling Hearts</h2>
+            <p>30 seconds mein jitne hearts catch kar sako!</p>
+        </div>
+
+        <div class="game-card glass">
+            <p>
+                Time: <span id="time">30</span>s |
+                Hearts: <span id="score">0</span>
+            </p>
+            <div class="game-area" id="gameArea">
+                <div class="game-note" id="gameHint">
+                    Start dabao aur hearts catch karo 💕
+                </div>
+            </div>
+            <button class="btn" id="startGame">Start Game</button>
+            <p id="gameResult"></p>
+        </div>
+    </div>
+</section>
+
+<section class="screen" id="more-games">
+    <div class="wrap">
+        <div class="section-title">
+            <div class="eyebrow">Bonus Level</div>
+            <h2>More Little Games</h2>
+            <p>Thodi masti aur thoda luck! 💞</p>
+        </div>
+
+        <div class="extra-games">
+
+            <div class="mini glass">
+                <h3>🧠 Memory Match</h3>
+                <p>Matching hearts ke pairs dhoondo.</p>
+                <div class="memory-grid" id="memoryGrid"></div>
+                <button class="small-btn" id="memoryReset">
+                    New Round
+                </button>
+                <p id="memoryStatus">Find all matching pairs!</p>
+            </div>
+
+            <div class="mini glass">
+                <h3>🎡 Lucky Wheel</h3>
+                <p>Spin karo aur cute surprise pao.</p>
+                <div class="wheel" id="wheel">💗</div>
+                <button class="small-btn" id="spinWheel">
+                    Spin Wheel
+                </button>
+                <p id="wheelResult">Your surprise awaits!</p>
+            </div>
+
+            <div class="mini glass">
+                <h3>🌷 Birthday Quiz</h3>
+                <p>Ek fun question ka answer guess karo.</p>
+                <h4 id="quizQuestion">
+                    My favourite kind of day?
+                </h4>
+                <div class="quiz-options" id="quizOptions">
+                    <button data-answer="rainy">Rainy</button>
+                    <button data-answer="sunny">Sunny</button>
+                    <button data-answer="cozy">Cozy</button>
+                </div>
+                <p id="quizResult">Choose your answer!</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="screen" id="memories">
+    <div class="wrap">
+        <div class="section-title">
+            <div class="eyebrow">Two People · Two Memories</div>
+            <h2>Our Photo Corner</h2>
+            <p>Apni aur Aditi ki photos add karo.</p>
+        </div>
+
+        <div class="photo-grid">
+
+            <div class="photo-card glass">
+                <h3>✨ That's Me</h3>
+                <div class="photo-frame" id="myPhotoFrame">
+                    <div class="photo-placeholder">
+                        📷<br>Apni photo add karo
+                    </div>
+                </div>
+                <input type="file" id="myPhotoInput" accept="image/*">
+            </div>
+
+            <div class="photo-card glass">
+                <h3>🌸 That's Aditi</h3>
+                <div class="photo-frame" id="herPhotoFrame">
+                    <div class="photo-placeholder">
+                        📷<br>Aditi ki photo add karo
+                    </div>
+                </div>
+                <input type="file" id="herPhotoInput" accept="image/*">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="screen" id="proposal">
+    <div class="proposal glass">
+
+        <div class="eyebrow">One Last Thing...</div>
+        <div class="script">Aditi,</div>
+
+        <h2>Will You Accept My Proposal?</h2>
+
+        <p>
+            Pata nahi kab aur kaise, lekin tum meri life ki
+            ek special person ban gayi ho.
+
+            Tumhari smile, tumhari baatein aur tumhara hona
+            mere liye matter karta hai.
+
+            Kya tum meri life ka ek beautiful part banogi?
+
+            <br><br>
+            No pressure. Tumhara answer jo bhi ho,
+            main respect karunga. 💗
+        </p>
+
+        <div class="answers" id="answers">
+            <button class="btn" id="yesBtn">
+                YES, I ACCEPT 💖
+            </button>
+
+            <button class="btn ghost" id="noBtn">
+                NO, I DON'T ACCEPT 🌷
+            </button>
+        </div>
+
+        <div class="no-msg" id="answerMsg"></div>
+
+        <div class="finale" id="finale">
+            <div class="script">I Love You, My Devi Ji 💗</div>
+            <h3>You Made This Moment Special!</h3>
+            <p>
+                Thank you Aditi! Here's to beautiful memories
+                and lots of smiles. ✨
+            </p>
+            <div style="font-size:50px">🌷💖🌙</div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    Made with care and lots of good wishes ✨
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
